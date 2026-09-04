@@ -1,10 +1,177 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mila Moyake — Chemical Engineering Portfolio</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500&display=swap');
 
+  :root {
+    --paper: #FAFAF7;
+    --ink: #1C1C1A;
+    --muted: #6B6B63;
+    --line: #DDD9CC;
+    --accent: #2E5C8A;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'IBM Plex Sans', sans-serif;
+    line-height: 1.6;
+  }
+
+  main {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 72px 24px 96px;
+  }
+
+  header h1 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 600;
+    font-size: 28px;
+    margin: 0 0 6px;
+    letter-spacing: -0.01em;
+  }
+
+  header p.role {
+    margin: 0 0 28px;
+    color: var(--muted);
+    font-size: 15px;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+
+  header p.intro {
+    font-size: 16px;
+    max-width: 58ch;
+    margin: 0 0 8px;
+  }
+
+  section {
+    margin-top: 48px;
+  }
+
+  section h2 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--muted);
+    margin: 0 0 20px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .project {
+    border-left: 2px solid var(--line);
+    padding: 2px 0 2px 18px;
+    margin-bottom: 22px;
+    transition: border-color 0.15s ease;
+  }
+
+  .project:hover {
+    border-left-color: var(--accent);
+  }
+
+  .project a.file {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    color: var(--accent);
+    text-decoration: none;
+    word-break: break-word;
+  }
+
+  .project a.file:hover {
+    text-decoration: underline;
+  }
+
+  .project p {
+    margin: 6px 0 0;
+    font-size: 15px;
+    color: var(--ink);
+    max-width: 56ch;
+  }
+
+  footer {
+    margin-top: 64px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  footer a {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--line);
+  }
+
+  footer a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+
+  @media (max-width: 480px) {
+    main { padding: 48px 20px 72px; }
+    header h1 { font-size: 24px; }
+  }
+</style>
+</head>
 <body>
-  <h1>mila</h1>
-  <p>Welcome to my website!</p>
-  <img src="https://content.codecademy.com/articles/github-pages-via-web-app/happy-ice-cream.gif" />
+<main>
+
+  <header>
+    <h1>Mila Moyake</h1>
+    <p class="role">Chemical Engineering Diploma — CPUT</p>
+    <p class="intro">Coursework and projects spanning spatial heat mapping, separations, and process design, alongside self-taught Python.</p>
+  </header>
+
+  <section>
+    <h2>reports (coursework)</h2>
+
+    <div class="project">
+      <a class="file" href="IVP_GA_2026_Mila_Moyake_v3_final.pdf">IVP_GA_2026_Mila_Moyake_v3_final.pdf</a>
+      <p>Evaluating the physical and chemical quality of a blended water dam supplied by borehole water and treated municipal wastewater, and its suitability for reuse and other end-use purposes.</p>
+    </div>
+
+    <div class="project">
+      <a class="file" href="IVP_Milling_Report_Moyake.pdf">IVP_Milling_Report_Moyake.pdf</a>
+      <p>An investigation into the grinding performance of milling media.</p>
+    </div>
+
+    <div class="project">
+      <a class="file" href="Separations_GA_Assignment_Final.pdf">Separations_GA_Assignment_Final.pdf</a>
+      <p>Designing a distillation column for a given data set using the McCabe–Thiele method.</p>
+    </div>
+
+    <div class="project">
+      <a class="file" href="Spatial_Heat_Mapping_Report.pdf">Spatial_Heat_Mapping_Report.pdf</a>
+      <p>Full write-up for the heat mapping experiment: temperature distribution across a tray, with and without a fan running.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>code</h2>
+
+    <div class="project">
+      <a class="file" href="heat_map_main.py">heat_map_main.py</a>
+      <p>Python analysis for the heat mapping lab experiment. Takes recorded temperature readings, interpolates between measurement points, and generates color-coded graphs of the heat distribution across the tray, for both conditions. This code produced the analysis behind <em>Spatial_Heat_Mapping_Report.pdf</em>.</p>
+    </div>
+  </section>
+
+  <footer>
+    <a href="https://www.linkedin.com/in/mila-moyake-a7178a3b7" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="mailto:moyake2016@gmail.com">moyake2016@gmail.com</a>
+    <a href="https://github.com/theObserver5/observer-repo" target="_blank" rel="noopener">Repository</a>
+  </footer>
+
+</main>
 </body>
-
 </html>
-
